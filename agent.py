@@ -75,7 +75,7 @@ required.
 
 
 EXCEPTIONS_PROMPT = """
-You are the exceptions-and-approvals specialist for company travel questions.
+You are the exceptions-and-approvals specialist agent for company travel questions.
 Your scope is policy exceptions, approval requirements, and escalation when the
 policy does not contain enough information.
 
@@ -174,7 +174,6 @@ Keep the answer grounded in the specialists' retrieved evidence.
 
 
 def build_agent(model):
-    """Create the coordinator Deep Agent with the three policy specialists."""
     return create_deep_agent(
         model=model,
         tools=[],

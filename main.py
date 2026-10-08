@@ -4,7 +4,9 @@ from langchain_ollama import ChatOllama
 from agent import build_agent
 
 def main():
-    print("Travel Policy Assistant - Sub-agents + MCP")
+    print("\nGrounded Travel Policy Assistant")
+    print("--------------------------------")
+    # print("Preparing the local RAG knowledge base...")
     model = ChatOllama(model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"), temperature=0)
     try:
         agent = build_agent(model)
